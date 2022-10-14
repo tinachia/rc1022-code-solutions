@@ -1,0 +1,25 @@
+.container {
+  width: 800px,;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.column-full {
+  flex-basis: 100%;
+}
+
+.text-align {
+  text-align: center;
+}
+
+button {
+  background-color: white;
+  margin: 0 50%;
+  color: rgb(213 82 65);
+  border-color: red;
+  border: solid;
+}
