@@ -21,29 +21,32 @@
       <div class="column-half">
         <h1>CANVAS</h1>
       </div>
-    </div>
-    <div class="column-half">
-      <div class="row">
-        <div class="column-one-fifth">
-          <button>Product</button>
-        </div>
-        <div class="column-one-fifth">
-          <button>Implementation</button>
-        </div>
-        <div class="column-one-fifth">
-          <button>About Us</button>
-        </div>
-        <div class="column-one-fifth">
-          <button>Blog</button>
-        </div>
-        <div class="column-one-fifth">
-          <button>Contact</button>
+      <div class="column-half">
+        <div class="row">
+          <div class="column-one-fifth">
+            <button class="button-top">Product</button>
+          </div>
+          <div class="column-one-fifth">
+            <button class="button-top">Implementation</button>
+          </div>
+          <div class="column-one-fifth">
+            <button class="button-top">About Us</button>
+          </div>
+          <div class="column-one-fifth">
+            <button class="button-top">Blog</button>
+          </div>
+          <div class="column-one-fifth">
+            <button class="button-contact-us">Contact Us</button>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
-  <div id="about-us">
+  <div class="about-us">
+    <div>
+      <img src="/css-canvas-medical/images/hero.jpg" alt="hero" class="image">
+    </div>
     <h2>The EMR ReImagined for Primary Care</h2>
     <p>Can't remember the last time you talked with a patient without
     focusing on the EMR? Canvas lets you rediscover joy in the work
@@ -54,8 +57,10 @@
     with the help of primary care providers.
     </p>
     <div>
-      <button>Get Started</button>
+      <button class="button-get-started">Get Started</button>
     </div>
+
+    <div class="overlay"></div>
   </div>
 
 
@@ -117,7 +122,7 @@
       </div>
       <div class="column-half">
         <div>
-          <button>Get Started</button>
+          <button class="button-get-started">Get Started</button>
         </div>
       </div>
     </div>
@@ -129,9 +134,9 @@
       <div class="column-half">
         <h2>CANVAS</h2>
         <p>2307 Irving Street, Suite 228
-          San Francisco CA 94122
-          (800)370-1416
-          info@canvasmedical.com
+          <br>San Francisco CA 94122
+          <br>(800)370-1416
+          <br>info@canvasmedical.com
         </p>
       </div>
       <div class="column-half">
@@ -140,45 +145,36 @@
         <div class="row">
           <div class="column-half">
             <div>
-              <button>COMPANY</button>
+              <button class="button-bottom">COMPANY</button>
             </div>
           </div>
           <div class="column-half">
             <div>
-              <button>PRODUCT</button>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="column-half">
-            <div>
-              <button>About Us</button>
-            </div>
-          </div>
-          <div class="column-half">
-            <div>
-              <button>Product</button>
+              <button class="button-bottom">PRODUCT</button>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="column-half">
             <div>
-              <button>Blog</button>
+              <button class="button-bottom">About Us</button>
             </div>
           </div>
           <div class="column-half">
             <div>
-              <button>Implementation</button>
+              <button class="button-bottom">Product</button>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="column-half">
+            <div>
+              <button class="button-bottom">Blog</button>
+            </div>
           </div>
           <div class="column-half">
             <div>
-              <button>For Health Plan</button>
+              <button class="button-bottom">Implementation</button>
             </div>
           </div>
         </div>
@@ -187,7 +183,16 @@
           </div>
           <div class="column-half">
             <div>
-              <button>Security</button>
+              <button class="button-bottom">For Health Plan</button>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column-half">
+          </div>
+          <div class="column-half">
+            <div>
+              <button class="button-bottom">Security</button>
             </div>
           </div>
         </div>
@@ -196,10 +201,18 @@
     </div>
   </div>
 
-  <div id="bottom">
-    <button>Privacy &amp; Terms</button>
-    <button>Contact Us</button>
+  <div class="container">
+    <div class="row">
+      <div class="column-full">
+        <div id="last">
+          <button class="button-last">Privacy &amp; Terms</button>
+          <button class="button-last">Contact Us</button>
+        </div>
+      </div>
+    </div>
   </div>
+
+
 
 </body>
 </html>
