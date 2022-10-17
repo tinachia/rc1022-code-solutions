@@ -1,0 +1,15 @@
+var fullName = 'Chivy Chia';
+console.log('value of fullName:', fullName);
+console.log('typeof fullName:', typeof 'Chivy Chia');
+var isCool = true;
+console.log('value of isCool:', isCool);
+console.log('typeof isCool:', typeof true);
+var totalPets = 1;
+console.log('value of totalPets:', totalPets);
+console.log('typeof totalPets:', typeof 1);
+var unknown = null;
+console.log('value of unknown:', unknown);
+console.log('typeof unknown:', typeof null);
+var never;
+console.log('value of never:', never);
+console.log('typeof never:', undefined);
