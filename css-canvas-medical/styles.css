@@ -2,6 +2,15 @@ body {
   font-family: Avenir, sans-serif;
 }
 
+hr {
+  margin: 30px 159px;
+  color: rgb(190 196 200);
+}
+
+h2 {
+  font-family: Avenir, serif;
+}
+
 .container {
   max-width: 1200px;
   margin: 25px auto;
@@ -14,6 +23,7 @@ body {
 
 .column-half {
   flex-basis: calc(100% / 2);
+  margin: 5px 50px;
 }
 
 .column-one-fifth {
@@ -22,21 +32,22 @@ body {
 
 .column-full {
   flex-basis: 100%;
+  margin: 5px 50px;
 }
 
-.about-us {
-  color: black;
+#about-us {
+  color: white;
   margin: 30px 159px;
+  padding: 20px;
   width: 1200px;
-  height: 300px;
+  height: 500px;
+  background-image: url("images/hero.jpg");
+  background-size: cover;
   position: relative;
 }
 
-.image {
-  margin: 30px 159px;
-  width: 1200px;
-  height: 300px;
-  position: absolute;
+.logo-image {
+  width: 130px;
 }
 
 .overlay {
@@ -57,6 +68,9 @@ body {
 #canvas-bottom {
   background-color: rgb(83 88 92);
   color: white;
+  width: 1200px;
+  height: 300px;
+  padding: 60px 0;
 }
 
 .button-top {
@@ -88,7 +102,7 @@ body {
 }
 
 .button-last {
-  margin: 30px 159px;
+  margin: 30px 15px;
   color: rgb(83 88 92);
   background-color: rgb(249 250 251);
   border: none;
@@ -97,4 +111,13 @@ body {
 #last {
   background-color: rgb(249 250 251);
   border-color: rgb(249 250 251);
+  padding: 0 20px;
+}
+
+.text-align {
+  text-align: center;
+}
+
+.padding-middle {
+  padding: 30px 0;
 }
