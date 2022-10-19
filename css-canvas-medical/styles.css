@@ -1,19 +1,25 @@
 body {
   font-family: Avenir, sans-serif;
+  font-style: normal;
+  font-weight: 500;
 }
 
 hr {
-  margin: 30px 159px;
-  color: rgb(190 196 200);
+  margin: 0 75px;
+  color: rgb(234 237 239);
+  border: 0.5px solid rgb(245 241 241);
 }
 
 h2 {
-  font-family: Avenir, serif;
+  font-family: "Tiempos Headline", serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
 }
 
 .container {
   max-width: 1200px;
-  margin: 25px auto;
+  margin: 0 auto;
 }
 
 .row {
@@ -26,8 +32,17 @@ h2 {
   margin: 5px 50px;
 }
 
+.top-menu-bar {
+  margin: 20px auto;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
 .column-one-fifth {
   flex-basis: calc(100% / 5);
+  padding: 0 5px;
 }
 
 .column-full {
@@ -35,14 +50,42 @@ h2 {
   margin: 5px 50px;
 }
 
+.h2-about-us {
+  position: absolute;
+  z-index: 9999;
+  line-height: 45px;
+  top: 40px;
+  left: 70px;
+  font-size: 35px;
+}
+
+.paragraph {
+  position: absolute;
+  z-index: 9999;
+  line-height: 25px;
+  top: 170px;
+  left: 70px;
+  font-size: 15px;
+}
+
+.button-about-us {
+  position: absolute;
+  z-index: 9999;
+  line-height: 20px;
+  bottom: 60px;
+  left: 20px;
+}
+
 #about-us {
   color: white;
-  margin: 30px 159px;
+  margin: 60px auto;
   padding: 20px;
-  width: 1200px;
+  width: 1000px;
   height: 500px;
   background-image: url("images/hero.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   position: relative;
 }
 
@@ -51,7 +94,7 @@ h2 {
 }
 
 .overlay {
-  background: linear-gradient transparent, rgb(103 103 103/ 50%);
+  background: linear-gradient(transparent, rgb(119 124 130 / 29%));
   position: absolute;
   top: 0;
   left: 0;
@@ -63,14 +106,26 @@ h2 {
   background-color: rgb(249 250 251);
   border-style: outset;
   border-color: rgb(249 250 251);
+  color: rgb(84 82 82);
+  width: 1200px;
+  height: 475px;
+  padding: 35px 0;
 }
 
 #canvas-bottom {
   background-color: rgb(83 88 92);
   color: white;
   width: 1200px;
-  height: 300px;
-  padding: 60px 0;
+  height: 350px;
+  padding: 100px 0;
+}
+
+.address {
+  line-height: 25px;
+}
+
+.ready-to-learn-font {
+  color: rgb(57 55 55);
 }
 
 .button-top {
@@ -83,7 +138,7 @@ h2 {
   background-color: rgb(28 74 111);
   color: white;
   border: none;
-  padding: 7px 27px;
+  padding: 15px 40px;
   border-radius: 3px;
 }
 
@@ -91,7 +146,7 @@ h2 {
   background-color: rgb(28 74 111);
   color: white;
   border: none;
-  padding: 7px 12px;
+  padding: 7px 8px;
   border-radius: 3px;
 }
 
@@ -112,6 +167,8 @@ h2 {
   background-color: rgb(249 250 251);
   border-color: rgb(249 250 251);
   padding: 0 20px;
+  width: 1200px;
+  height: 100px;
 }
 
 .text-align {
@@ -120,4 +177,9 @@ h2 {
 
 .padding-middle {
   padding: 30px 0;
+}
+
+.text-align-right {
+  text-align: right;
+  margin-top: 30px;
 }
