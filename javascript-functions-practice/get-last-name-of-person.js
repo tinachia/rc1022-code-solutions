@@ -1,5 +1,5 @@
 /* exported getLastNameOfPerson */
 function getLastNameOfPerson(person) {
-  var LastNameOfPerson = person.lastName;
-  return LastNameOfPerson;
+  var lastNameOfPerson = person.lastName;
+  return lastNameOfPerson;
 }
