@@ -156,6 +156,11 @@ h2 {
   background: none;
 }
 
+.position-relative {
+  position: relative;
+  left: 175px;
+}
+
 .button-last {
   margin: 30px 15px;
   color: rgb(83 88 92);
