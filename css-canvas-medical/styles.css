@@ -1,0 +1,190 @@
+body {
+  font-family: Avenir, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+
+hr {
+  margin: 0 75px;
+  color: rgb(234 237 239);
+  border: 0.5px solid rgb(245 241 241);
+}
+
+h2 {
+  font-family: "Tiempos Headline", serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.column-half {
+  flex-basis: calc(100% / 2);
+  margin: 5px 50px;
+}
+
+.top-menu-bar {
+  margin: 20px auto;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.column-one-fifth {
+  flex-basis: calc(100% / 5);
+  padding: 0 5px;
+}
+
+.column-full {
+  flex-basis: 100%;
+  margin: 5px 50px;
+}
+
+.h2-about-us {
+  position: absolute;
+  z-index: 9999;
+  line-height: 45px;
+  top: 40px;
+  left: 70px;
+  font-size: 35px;
+}
+
+.paragraph {
+  position: absolute;
+  z-index: 9999;
+  line-height: 25px;
+  top: 170px;
+  left: 70px;
+  font-size: 15px;
+}
+
+.button-about-us {
+  position: absolute;
+  z-index: 9999;
+  line-height: 20px;
+  bottom: 60px;
+  left: 20px;
+}
+
+#about-us {
+  color: white;
+  margin: 60px auto;
+  padding: 20px;
+  width: 1000px;
+  height: 500px;
+  background-image: url("images/hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+.logo-image {
+  width: 130px;
+}
+
+.overlay {
+  background: linear-gradient(transparent, rgb(119 124 130 / 29%));
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+#clinician-prefers {
+  background-color: rgb(249 250 251);
+  border-style: outset;
+  border-color: rgb(249 250 251);
+  color: rgb(84 82 82);
+  width: 1200px;
+  height: 475px;
+  padding: 35px 0;
+}
+
+#canvas-bottom {
+  background-color: rgb(83 88 92);
+  color: white;
+  width: 1200px;
+  height: 350px;
+  padding: 100px 0;
+}
+
+.address {
+  line-height: 25px;
+}
+
+.ready-to-learn-font {
+  color: rgb(57 55 55);
+}
+
+.button-top {
+  border: none;
+  color: rgb(145 148 150);
+  background-color: white;
+}
+
+.button-get-started {
+  background-color: rgb(28 74 111);
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 3px;
+}
+
+.button-contact-us {
+  background-color: rgb(28 74 111);
+  color: white;
+  border: none;
+  padding: 7px 8px;
+  border-radius: 3px;
+}
+
+.button-bottom {
+  border: none;
+  color: white;
+  background: none;
+}
+
+.position-relative {
+  position: relative;
+  left: 175px;
+}
+
+.button-last {
+  margin: 30px 15px;
+  color: rgb(83 88 92);
+  background-color: rgb(249 250 251);
+  border: none;
+}
+
+#last {
+  background-color: rgb(249 250 251);
+  border-color: rgb(249 250 251);
+  padding: 0 20px;
+  width: 1200px;
+  height: 100px;
+}
+
+.text-align {
+  text-align: center;
+}
+
+.padding-middle {
+  padding: 30px 0;
+}
+
+.text-align-right {
+  text-align: right;
+  margin-top: 30px;
+}
