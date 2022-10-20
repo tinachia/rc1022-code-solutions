@@ -10,7 +10,7 @@ h1 {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 2000px;
   margin: 0 auto;
 }
 
@@ -26,6 +26,7 @@ h1 {
 .column-one-fourth {
   flex-basis: calc(100% / 4);
   display: flex;
+  justify-content: center;
 }
 
 .icon {
@@ -40,12 +41,10 @@ h3 {
   width: 200px;
   margin: 20px 135px;
   justify-content: center;
+  text-align: center;
 }
 
 p {
   font-family: sans-serif;
   font-size: 17px;
-  width: 300px;
-  margin: 10px 80px;
-  justify-content: center;
 }
