@@ -1,0 +1,45 @@
+body {
+  font-family: "DM Sans", sans-serif;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.column-full {
+  flex-basis: 100%;
+  text-align: center;
+}
+
+.column-one-fifth {
+  flex-basis: calc(100% / 5);
+  display: flex;
+  justify-content: left;
+}
+
+.photo {
+  width: 200px;
+  height: 350px;
+}
+
+p {
+  font-size: 10px;
+}
+
+.gray-font {
+  color: gray;
+}
+
+.highlight {
+  background-color: rgb(248 229 211);
+}
+
+.bold {
+  font-weight: 200;
+}
