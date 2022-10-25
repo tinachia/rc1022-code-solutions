@@ -23,6 +23,14 @@ img.pokeball {
   display: block;
 }
 
+.pokeball-wrapper:first-child > img.pokeball {
+  transform: rotate(-30deg);
+}
+
+.pokeball-wrapper:last-child > img.pokeball {
+  transform: rotate(30deg);
+}
+
 button {
   border: none;
   border-radius: 0.25rem;
@@ -37,12 +45,4 @@ button:focus {
 
 button:active {
   transform: translateY(0.25rem);
-}
-
-div > img:first-child {
-  transform: rotate(0.3turn);
-}
-
-.img:last-child {
-  transform: rotate(0.6turn);
 }
