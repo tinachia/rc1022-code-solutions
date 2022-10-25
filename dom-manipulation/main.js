@@ -1,8 +1,10 @@
-var $hotButton = document.querySelector('.hot-button.cold');
+
+var clicks = 0;
+
+var $hotButton = document.querySelector('.hot-button');
 var $clickCount = document.querySelector('.click-count');
 
 $hotButton.addEventListener('click', amounOfClicks);
-var clicks = 0;
 
 function amounOfClicks() {
   clicks++;
@@ -21,7 +23,7 @@ function amounOfClicks() {
     temperature = 'nuclear';
   }
 
-  $hotButton.className = 'hot-button' + temperature;
-  $clickCount.textContent = 'clicks:' + clicks;
+  $hotButton.className = 'hot-button ' + temperature;
+  $clickCount.textContent = 'clicks: ' + clicks;
 
 }
