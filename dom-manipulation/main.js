@@ -7,16 +7,16 @@ var clicks = 0;
 function amounOfClicks() {
   $clickCount.textContent = clicks++;
   if (clicks < 4) {
-    $hotButton.className = 'hot-button cold';
+    $hotButton.textContent = 'hot-button cold';
   } else if (clicks < 7) {
-    $hotButton.className = 'hot-button cool';
+    $hotButton.textContent = 'hot-button cool';
   } else if (clicks < 10) {
-    $hotButton.className = 'hot-button tepid';
+    $hotButton.textContent = 'hot-button tepid';
   } else if (clicks < 13) {
-    $hotButton.className = 'hot-button warm';
+    $hotButton.textContent = 'hot-button warm';
   } else if (clicks < 16) {
-    $hotButton.className = 'hot-button hot';
+    $hotButton.textContent = 'hot-button hot';
   } else if (clicks >= 10) {
-    $hotButton.className = 'hot-button nuclear';
+    $hotButton.textContent = 'hot-button nuclear';
   }
 }
