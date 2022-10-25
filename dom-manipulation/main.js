@@ -5,18 +5,23 @@ $hotButton.addEventListener('click', amounOfClicks);
 var clicks = 0;
 
 function amounOfClicks() {
-  $clickCount.textContent = clicks++;
+  clicks++;
+  var temperature;
   if (clicks < 4) {
-    $hotButton.textContent = 'hot-button cold';
+    temperature = 'cold';
   } else if (clicks < 7) {
-    $hotButton.textContent = 'hot-button cool';
+    temperature = 'cool';
   } else if (clicks < 10) {
-    $hotButton.textContent = 'hot-button tepid';
+    temperature = 'tepid';
   } else if (clicks < 13) {
-    $hotButton.textContent = 'hot-button warm';
+    temperature = 'warm';
   } else if (clicks < 16) {
-    $hotButton.textContent = 'hot-button hot';
-  } else if (clicks >= 10) {
-    $hotButton.textContent = 'hot-button nuclear';
+    temperature = 'hot';
+  } else {
+    temperature = 'nuclear';
   }
+
+  $hotButton.className = 'hot-button' + temperature;
+  $clickCount.textContent = 'clicks:' + clicks;
+
 }
