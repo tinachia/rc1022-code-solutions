@@ -4,5 +4,8 @@ function take(array, count) {
   for (var i = 0; i < count; i++) {
     arr.push(array[i]);
   }
+  // } if array === [] {
+  //   return [];
+  // }
   return arr;
 }
