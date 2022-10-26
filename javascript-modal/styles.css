@@ -4,11 +4,12 @@
 
 body {
   margin: 0 auto;
+  font-family: sans-serif;
 }
 
 main {
   display: flex;
-  align-items: center;
+  margin: auto;
 }
 
 .modal {
@@ -20,31 +21,43 @@ main {
   margin: 10px;
 }
 
-.background {
-  background-color: white;
-}
-
-.modal.off {
-  background-color: red;
-  border: outset;
-  border-color: gray;
+.modal-off {
+  background-color: #ff6e6e;
+  color: white;
+  border: none;
   flex-basis: center;
   border-radius: 3px;
   padding: 10px 25px;
   margin: 10px;
 }
 
-.survey.on {
-  background: linear-gradient(transparent, rgb(0 0 0 / 0.75%));
+.survey {
+  box-shadow: 0 0 1400px 1400px rgb(0 0 0 / 75%);
+  position: fixed;
+  top: 0;
+  left: 50px;
+  bottom: 200px;
+  right: 50px;
+  text-align: center;
+  width: 300px;
+  height: 150px;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.overlay {
   position: absolute;
   top: 0;
   left: 0;
-  bottom: 0;
-  right: 0;
-  min-height: 100vh;
-  justify-content: center;
+  height: 100%;
+  width: 1000px;
+  background-color: rgb((0 0 0 rgb(0 0 0 / 0.5%)));
 }
 
 .hidden {
   display: none;
+}
+
+p {
+  font-weight: bold;
 }

@@ -1,31 +1,18 @@
-var clicks = 0;
 
 var $modal = document.querySelector('.modal');
-$modal.addEventListener('click', modalOn);
+var $survey = document.querySelector('.survey');
+var $modalOff = document.querySelector('.modal-off');
 
 function modalOn() {
-  clicks++;
   var modalTurnOn;
-  if (clicks % 2 === 0) {
-    modalTurnOn = 'on';
-  } else {
-    modalTurnOn = 'off';
-    document.getElementByclass('.modal').style.display = 'none';
-  }
   $modal.className = 'modal ' + modalTurnOn;
+  $survey.className = 'survey';
 }
 
-var $survey = document.querySelector('.survey');
-$survey.addEventListener('click', surveyOn);
+$modal.addEventListener('click', modalOn);
 
 function surveyOn() {
-  clicks++;
-  var surveyTurnOn;
-  if (clicks % 2 === 1) {
-    surveyTurnOn = 'on';
-  } else {
-    surveyTurnOn = 'off';
-  }
-
-  $survey.className = 'survey ' + surveyTurnOn;
+  $survey.className = 'survey ' + 'hidden';
 }
+
+$modalOff.addEventListener('click', surveyOn);
