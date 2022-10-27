@@ -58,8 +58,44 @@ var pokedex = [
 ];
 
 // function renderPokemon(pokemon) {
-//   var newitemFirst = document.createElement('div');
-//   var newClassFirst = document.createTextNode('column-third');
-//   newitemFirst.appendChild(newClassFirst);
-//   var position = document.getElementsByClassName('.row');
-// //   position.appendChild(newItemFirst);
+//   var newElementFirst = document.createElement('div');
+//   newElementFirst.setAttribute('class', 'column-third');
+
+//   var newElementSecond = document.createElement('div');
+//   newElementSecond.setAttribute('class', 'pokemon-card');
+//   var secondClass = row.appendChild(newElementFirst);
+//   secondClass.appendChild(newElementSecond);
+
+//   var newElementThird = document.createElement('img');
+//   newElementThird.setAttribute('src', pokemon.imageUrl);
+//   newElementSecond.appendChild(newElementThird);
+
+//   var newElementFourth = document.createElement('div');
+//   newElementFourth.setAttribute('class', 'pokemon-card-text');
+//   newElementSecond.appendChild(newElementFourth);
+
+//   var newElementFifth = document.createElement('h2');
+//   var name = document.createTextNode(pokemon.name);
+//   newElementFifth.appendChild(name);
+//   newElementFourth.appendChild(newElementFifth);
+
+//   var newElementSixth = document.createElement('h3');
+//   var number = document.createTextNode(pokemon.number);
+//   newElementSixth.appendChild(number);
+//   newElementFourth.appendChild(newElementSixth);
+
+//   var newElementSeventh = document.createElement('p');
+//   var parag = document.createTextNode(pokemon.description);
+//   newElementSeventh.appendChild(parag);
+//   newElementFourth.appendChild(newElementSeventh);
+
+//   return newElementFirst;
+
+// }
+
+// var row = document.querySelector('.row');
+
+// // for (var i = 0; i < pokedex.length; i++) {
+// //   return
+// // }
+// // return renderPokemon;
