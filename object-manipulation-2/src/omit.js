@@ -6,7 +6,7 @@ function omit(source, keys) {
       delete source[keys[i]];
       object = source;
     } else if (source[keys[i]] === undefined) {
-      object = source;
+      object = source[keys[i]];
     }
   }
   return object;
