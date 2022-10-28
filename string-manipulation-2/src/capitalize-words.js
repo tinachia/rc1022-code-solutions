@@ -1,10 +1,15 @@
 /* exported capitalizeWords */
-// function capitalizeWords(string) {
-//   var lowCase = string.charAt(0).toLowerCase();
-//   var splitWords = string.split(' ');
-//   var firstLetter = string.charAt(0).toUpperCase(splitWords);
-//   var capCase = firstLetter;
-//   return capCase;
-// }
 
-// console.log(capitalizeWords('needs solution'));
+function capitalizeWords(string) {
+  var lowCase = string.toLowerCase();
+  var splitWords = lowCase.split(' ');
+  var arr = [];
+
+  for (var i = 0; i < splitWords.length; i++) {
+    var firstLetter = splitWords[i].charAt(0).toUpperCase() + splitWords[i].slice(1).toLowerCase();
+    arr.push(firstLetter);
+  }
+  var oneString = arr.join(' ');
+  return oneString;
+
+}
