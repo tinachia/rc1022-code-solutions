@@ -1,12 +1,9 @@
 /* exported omit */
 function omit(source, keys) {
   var object = {};
-  for (var i = 0; i < keys.length; i++) {
-    if (source[keys[i]] !== undefined) {
-      delete source[keys[i]];
-      object = source;
-    } else if (source[keys[i]] === undefined) {
-      object = source[keys[i]];
+  for (const i in source) {
+    if (!keys.includes(i)) {
+      object[i] = source[i];
     }
   }
   return object;
