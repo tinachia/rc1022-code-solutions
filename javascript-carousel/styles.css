@@ -1,0 +1,14 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.column-full {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.column-one-ninth {
+  width: calc(100% / 9);
+}
