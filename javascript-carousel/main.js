@@ -1,7 +1,7 @@
 // query select all classes
 var $pokemonImages = document.querySelectorAll('.pokemon');
-var $circle = document.querySelectorAll('.circles');
-var $regularCircle = document.querySelector('.fa-circle');
+var $circle = document.querySelector('.circles');
+var $regularCircle = document.querySelectorAll('.fa-circle');
 var $arrows = document.querySelector('.arrows');
 var $leftArrow = document.querySelector('.fa-chevron-left');
 var $rightArrow = document.querySelector('.fa-chevron-right');
