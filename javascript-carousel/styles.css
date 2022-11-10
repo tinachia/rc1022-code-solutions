@@ -12,3 +12,16 @@
 .column-one-ninth {
   width: calc(100% / 9);
 }
+
+.fa-chevron-left,
+.fa-chevron-right {
+  margin: 14rem 0;
+}
+
+.fa-circle {
+  padding: 0 0.5rem;
+}
+
+.hidden {
+  display: none;
+}
