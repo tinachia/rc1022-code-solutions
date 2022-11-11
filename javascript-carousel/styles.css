@@ -1,0 +1,27 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.column-full {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.column-one-ninth {
+  width: calc(100% / 9);
+}
+
+.fa-chevron-left,
+.fa-chevron-right {
+  margin: 14rem 0;
+}
+
+.fa-circle {
+  padding: 0 0.5rem;
+}
+
+.hidden {
+  display: none;
+}
