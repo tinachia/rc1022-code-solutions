@@ -14,3 +14,4 @@ function isAnagram(firstString, secondString) {
     return false;
   }
 }
+

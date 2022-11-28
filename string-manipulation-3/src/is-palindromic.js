@@ -1,4 +1,5 @@
 /* exported isPalindromic */
+
 // define a function passing in string
 function isPalindromic(string) {
 // declare var to delete all spaces with replace method

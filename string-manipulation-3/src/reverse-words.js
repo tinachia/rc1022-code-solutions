@@ -1,4 +1,5 @@
 /* exported reverseWords */
+
 // define a funnction reverseWords passing in one arg string
 function reverseWords(string) {
   // declare a var of an array that split the strings w.o spaces and store that new array
@@ -21,3 +22,4 @@ function reverseWords(string) {
   var final = newArr.join(' ');
   return final;
 }
+

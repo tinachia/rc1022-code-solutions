@@ -1,4 +1,5 @@
 /* exported titleCase */
+
 // define a function titleCase passing in title
 // use .includes to check for :,
 // split title up if ':' into an array
@@ -71,3 +72,4 @@ function apaStyle(title) {
 // add each word to array
 // join all the words in the array into a string separated by spaces
 // the result of that becomes the output
+
