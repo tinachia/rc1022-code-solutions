@@ -1,21 +1,10 @@
 let count = 3;
 
-function countdown() {
-  if (count === 0) {
-    console.log('Blast off!');
-    clearInterval(counter);
-  }
+const interval = setInterval(() => {
   count--;
-}
+  if (count <= 0) {
+    console.log('Blast off!');
+    clearInterval(interval);
+  }
 
-const counter = setInterval(countdown, 1000);
-
-// setInterval(counting => {
-//   count--;
-//   const counter = setInterval(counting, 1000);
-//   if (count <= 0) {
-//     console.log('Blast off!');
-//   }
-//   clearInterval(counter);
-
-// }, 1000);
+}, 1000);
