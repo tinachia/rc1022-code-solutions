@@ -1,0 +1,33 @@
+span {
+  font-family: Courier, monospace;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.black {
+  color: black;
+}
+
+.green {
+  color: rgb(77 232 69);
+}
+
+.red {
+  color: red;
+}
+
+.space {
+  white-space: pre;
+}
+
+.current {
+  border-bottom: solid;
+}
+
+.bold {
+  font-weight: bold;
+}
