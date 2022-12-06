@@ -1,5 +1,4 @@
 const express = require('express');
-const app = express();
 const grades = {
   12: {
     id: 12,
@@ -21,17 +20,27 @@ const grades = {
   }
 };
 
+const app = express();
+
 app.get('/api/grades', (req, res) => {
-  const gradesArray = Object.values(grades);
+  const gradesArray = [];
+  for (const id in grades) {
+    gradesArray.push(grades[id]);
+  }
   res.json(gradesArray);
 });
 
-app.delete('/api/grades', (req, res) => {
+app.delete('/api/grades/:id', (req, res) => {
   const id = Number(req.params.id);
-  delete grades[id];
-  res.sendStatus(204);
+  if (!grades[id]) {
+    res.sendStatus(404);
+  } else {
+    delete grades[id];
+    res.sendStatus(204);
+  }
 });
 
 app.listen(3000, () => {
-  // console.log('express server listening on port 3000');
+  // eslint-disable-next-line no-console
+  console.log('express server listening on port 3000');
 });
