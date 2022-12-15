@@ -1,0 +1,32 @@
+button {
+  color: white;
+  padding: 1px, 2px;
+  border: inset black 2px;
+}
+
+.cold {
+  background-color: rgb(53 28 117);
+}
+
+.warming {
+  background-color: rgb(103 78 167);
+}
+
+.warm {
+  background-color: rgb(103 78 167);
+}
+
+.warmer {
+  background-color: rgb(246 178 107);
+  color: black;
+}
+
+.hot {
+  background-color: rgb(255 255 0);
+  color: black;
+}
+
+.fire {
+  background-color: white;
+  color: black;
+}
