@@ -1,0 +1,28 @@
+.circle {
+  padding: 2rem;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  display: flex;
+  margin: 0 auto;
+  color: rgb(13 13 13);
+  border-style: solid;
+  border-width: 4px;
+}
+
+p {
+  font-size: 2.5rem;
+  display: flex;
+  text-align: center;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+i {
+  font-size: 2rem;
+  text-align: center;
+  width: 100%;
+  margin-top: 10px;
+  color: rgb(18 17 17);
+}
