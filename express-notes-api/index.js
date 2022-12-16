@@ -16,7 +16,7 @@ app.get('/api/notes/:id', (req, res) => {
   const id = Number(req.params.id);
   const errorMessage = { error: 'id must be a positive integer' };
   const notFound = { error: `cannot find note with id ${id}` };
-  if (id <= 0 || isNaN(id)) {
+  if (id <= 0 || Number.isInteger(id)) {
     res.status(400);
     res.json(errorMessage);
   } else {
@@ -49,7 +49,7 @@ app.delete('/api/notes/:id', (req, res) => {
   const id = Number(req.params.id);
   const errorMessage = { error: 'id must be a positive integer' };
   const notFound = { error: `cannot find note with id ${id}` };
-  if (id <= 0 || isNaN(id)) {
+  if (id <= 0 || Number.isInteger(id)) {
     res.status(400);
     res.json(errorMessage);
   } else {
@@ -72,7 +72,7 @@ app.put('/api/notes/:id', (req, res) => {
   if (!('content' in req.body)) {
     res.status(400);
     res.json(errorMessage);
-  } else if (id <= 0 || isNaN(id)) {
+  } else if (id <= 0 || Number.isInteger(id)) {
     res.status(400);
     res.json(errorId);
   } else if (!(data.notes[id])) {
