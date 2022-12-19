@@ -1,0 +1,75 @@
+*{
+  box-sizing: border-box;
+  font-family: "Segeo UI", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2{
+  font-size: 30px;
+  margin-left: 10px;
+}
+
+img {
+  width: 75%;
+  margin: 0 auto;
+}
+
+i{
+  font-size: 30px;
+}
+
+button {
+  border: none;
+  background-color: white;
+  display: block;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  padding: 5px 0;
+  margin-left: 10ox;
+  font-size: 25px;
+  font-weight: 300;
+}
+
+.container {
+  height: 700px;
+}
+
+.drawer {
+  height: 100%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.menu {
+  background-color: white;
+}
+
+.row {
+  display: flex;
+}
+
+.column-two-third {
+  width: calc(200% / 3);
+}
+
+.modal {
+  background-color: rgb(0 0 0 / 50%);
+}
+.hidden {
+  display: none;
+}
+
+.capamerica:hover {
+  text-shadow: 5px 5px 5px rgb(48, 112, 208);
+}
+
+.ironman:hover {
+  text-shadow: 5px 5px 5px rgb(204, 25, 61);
+}
+
+.hulk:hover {
+    text-shadow: 5px 5px 5px rgb(9, 112, 21);
+  }
