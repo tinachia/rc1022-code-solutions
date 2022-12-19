@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  width: 50%;
+  margin: 1px auto;
+}
+
+.details {
+  border: solid 1px;
+  margin: 1px 0;
+  padding: 10px;
+}
+
+.topic {
+  background-color: rgb(174, 177, 179);
+  border: solid 1px;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.hidden {
+  display: none;
+}
