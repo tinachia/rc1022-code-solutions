@@ -1,0 +1,110 @@
+Feature 1: User can sign up
+
+1. Before a user signs up, the server was created with express(), database was created, and files were served with express.static
+2. When the app is initially rendered, nothing shows (null was returned) because initial state for isAuthorizing was true.
+3. After that rendered, an event listener for hash changes was added to the window object and state (isAuthorizing & user) is updated to false & null with the componentDidMount method.
+   - The hashchange listener updates state with the return of the parseRoute method with the window.location.hash as the argument
+   - parseRoute takes the argument and splits it into an array which is then destructured into path and queryString
+   - URLSearchParams function is called with the new operator and queryString as the argument and the return is assigned to params
+   - path and params are returned from the function
+   - getItem method attempts to grab a token from local storage but since there is currently no token, user is null.
+4. That caused the app to schedule a re-render. In that re-render, the nav bar and page containers were created with the class Navbar and the PageContainer function with AppContext as a provider.
+5. When the nav bar was created, since the value of user (which was provided as context from AppContext) was null, anchor tags for Sign in and Sign up were created
+6. When the page container was created, the renderPage method was called and passed in argument for the PageContainer function.
+7. The render page method returned a "page" based on the current route in state.
+8. In this case, the route was '' so the Home react element was returned.
+9. Because user is currently null (context provided by AppContext), the Redirect react element was returned with prop to and a value of 'sign-in'.
+10. The redirect function replaces the hash with 'sign-in' and updates the window.location.
+   - Since the hash has changed, the event listener updates state and causes a re-render.
+11. The nav bar remains the same during the re-render because the user is still null (context from AppContext)
+12. When page container was created, renderPage method is called again and returned the Auth react element
+13. When the Auth page rendered with the AuthPage class, the user is not redirected because at this time, user is null (user was provided as context from AppContext)
+   - Instead, because the route path is currently, 'sign-in', the welcome message 'Please sign in to continue' is displayed.
+   - The authform react element is part of the return. It contains 3 props, a key, action, and onSignIn.
+   - Both the key and action have route.path as values, while onSignIn has handleSignIn as the value (all were provided as context from AppContext)
+   - Because the action is currently 'sign-up' (from the route.path), the button text says 'Log In' and the anchor tag says 'Register Now'
+14. When the user clicks on either the 'Register Now' anchor tag in the form or 'Sign Up' button on the nav bar, the hash is changed to 'sign-up'
+15. This triggers the event listener on hash changes
+   - State is updated with setState and the value becomes the return of the parseRoute method with the new hash as the argument
+16. The update sets up a re-render with AppContext as the provider, Navbar react element and PageContainer react element as children
+17. Navbar remains the same because user is still null (context from AppContext)
+18. PageContainer react element is created with the renderPage method called.
+    - RenderPage returns Auth react element with 'Create an account to get started!' welcome message and an AuthForm react element
+19. The AuthForm react element button now says 'Register' and the anchor tag now says 'Sign in instead'
+20. When the Authform was created with class AuthForm, a submit event listener was added onto the form and change event listeners that update state were added on the inputs for username and password
+21. When a submit event occurs (user entering a username/password and clicking on register), handleSubmit sends a fetch request to our API with the route.path ('sign-up') that was passed in as the action prop
+22. The server receives a post request to '/api/auth/sign-up' which causes it to communicate with our database
+   - The request is destructured into username and password
+   - If there's no username or password, the ClientError function is called and the error is thrown and the user is notified
+23. The user's password is then hashed with argon2
+24. The server sends a query to our database to insert the username and hashed password into our table of users
+25. The result from the query is then parsed and sent to the client (user)
+26. The client receives the response which is then parsed
+27. Because the value of the action prop passed in was 'sign-up', the hash changes to 'sign-in'
+28. As a result, the hashchange event listener fires and changes state.
+29. This in turn causes another re-render of the app. This time, the user is directed to the 'sign-in' page.
+    - The Navbar that was rendered remains the same but the page container updates when the renderPage method is called
+30. Auth react element is returned again from the renderPage method but with a different welcome message/AuthForm
+    - The message is 'Please sign in to continue' since the route.path (provided by context from AppContext) is now 'sign-in'
+    - The AuthForm button now says 'Log in' while the anchor tag now says 'Register now' because the action (passed in as a prop) is currently 'sign-in'
+
+Feature 2: User can sign in
+
+1. If the user already has a username and password, they can sign in by clicking on either the 'Sign In' button on the nav bar or the 'Sign in instead' anchor on the auth form
+2. When the user clicks on either, the hash changes to 'sign-in' and the event listener fires and changes state.route to 'sign-in' which in turn calls for an app re-render
+3. In the re-render, the navbar remains the same but the page container is what React updates. The renderPage method is called again
+4. The same Auth react element was rendered.
+   - This time however, the AuthForm inside of the Auth element renders differently to accomodate for signing in (refer to step 13 in Feature 1 above).
+   - The same event handlers are attached to the form (handleSubmit) and input react elements (handleChange)
+5. When the user enters the username and password and clicks on the submit button, a submit event occurs and a fetch request is sent but this time with the route.path ('sign-in') being passed as a prop
+6. Our server receives a post request to '/api/auth/sign-in' which in turn causes our server to send a request to the database
+7. We query the database (db.query method) for the username and hashed password.
+  - If there is no user found, the server sends the error message to the user with the clientError function (aka they aren't allowed to log in)
+8. The password is then verified with the hashed password with argon2 (argon2.verify)
+  - if the passwords don't match, the server sends the error message to the user with the clientError function (aka they aren't allowed to log in)
+  - If the passwords do match, a payload is created with the userId and username
+9. The token is created with the jwt.sign method with the payload and the token secret as the arguments
+10. The token and payload are then parsed and sent to back to the client
+11. The results from the server are then parsed
+12. Now that the user has a payload (result.user) and token (result.token)...
+   - The onSignIn method, which is handleSignIn (that was passed in as a prop from the Auth page that was passed as context from AppContext) is called with result as the argument
+13. The handleSignIn method destructures the result and places the token in local storage with setItem method
+   - It also updates state with the setState method so the user is no longer null. The user becomes the user.
+14. When state is updated, it calls for a re-render.
+   - The nav bar updates with a sign-out button because user (provided as context from AppContext) is no longer null
+   - The page container is also updated when the renderPage method is called.
+15. This time, renderPage returns the Home react element
+   - since user (which was passed in as context from AppContext) is no longer null, they are not redirected to sign in but instead are never gonna give you up.
+
+Feature 3: User can stay signed in (even if they refresh the page)
+
+1. When the user refreshes the page, everything is ripped off the page and the whole process is started again.
+2. The app originally renders with nothing showing because this.state.isAuthorizing is true
+3. After the render, the componentDidMount method runs and adds the event listener to the window object for hash changes and updates state with setState accordingly
+4. It also grabs the token from local storage with getItem method.
+5. Since there is a token, the jwtDecode function is called and assigned to the variable user
+6. State is updated (isAuthorizing becomes false, and user is longer null and has user as a value)
+7. Since state was updated, a re-render occurs
+8. This time, the navbar and page container react elements are both created and returned with AppContext as a provider.
+   - The nav bar is created with a sign-out button because user (provided as context from AppContext) is no longer null
+   - The page container react element calls the renderPage method which returns the home react element since the path is an empty string.
+   - Since the user (which was passed in as context from AppContext) is no longer null, they get to be rick rolled again and again and again and again and again and again and again and again and again and again and again and again and again and again and again and again and again and again and again and again and again and again and again and again and again and again and again and again and again...
+
+Feature 4: User can sign out
+
+1. When the nav bar was rendered with a sign-out button (because user, which was provided as context from AppContext, was not null), there was a click event listener added to the button
+2. The event listener was handleSignOut (this was also provided as context from AppContext)
+3. When the user clicks on the sign-out button, the token is removed from localStorage with the removeItem method.
+4. State is updated with setState (user becomes null) and calls for a re-render
+5. The navbar and page container react elements are rendered with AppContext as a provider.
+   - Because user is currently null (provided as context from AppContext), sign in and sign up anchors are returned from the navbar element
+   - Page container element calls the renderPage method. Since path is an empty string, the home react element is returned
+6. Since user is null (provided as context from AppContext), redirect react element is returned with prop to and a value of 'sign-in'.
+7. The redirect function replaces the hash and updates the window.location.
+   - Since the hash has changed, the event listener updates state and causes a re-render.
+   - Which in this case, sends the user back to the sign-in page.
+8. When the re-render happens, since there is no user (context from AppContext), the Navbar react element is created with 'Sign In' and 'Sign Up' anchor tags
+9. The page container element is created and calls renderPage method.
+10. The renderPage method returns the Auth react element with a different the sign in message and an AuthForm react element
+    - The message is 'Please sign in to continue' since the route.path (provided by context from AppContext) is now 'sign-in'
+    - The AuthForm button now says 'Log in' while the anchor tag now says 'Register now' because the action (passed in as a prop) is currently 'sign-in'
